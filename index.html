@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Formularz</title>
-    <style>
-        .error {
-            color: red;
-            font-size: 0.9em;
-        }
-    </style>
 </head>
 <body>
 <h2>Formularz</h2>
 <form id="registrationForm">
     <label for="username">Login:</label>
-    <input type="text" id="username" name="username" required
-           pattern="^((?:\s*[A-Za-z]\s*){2,60})$" title="Nazwa użytkownika musi mieć od 2 do 60 znaków.">
+    <input type="text" id="username" name="username" required>
+    <div id="usernameError" class="error"></div>
     <br><br>
 
     <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required
-           pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Podaj poprawny adres e-mail.">
+    <input type="text" id="email" name="email" required>
+    <div id="emailError" class="error"></div>
     <br><br>
 
     <button type="submit">Submit</button>
-    <div id="summaryError" class="error"></div>
 </form>
 </body>
+<script src="script.js"></script>
 </html>
